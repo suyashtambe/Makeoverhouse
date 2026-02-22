@@ -15,7 +15,7 @@ def get_admin_profile(current_admin = Depends(get_current_admin)):
         "email": current_admin.email,
         "role": current_admin.role
     }
-
+ 
 @router.post("/register")
 def register_admin(data: AdminRegister, db: Session = Depends(get_db)):
     existing = db.query(User).filter(User.email == data.email).first()
@@ -23,12 +23,12 @@ def register_admin(data: AdminRegister, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Email already exists")
 
     new_admin = User(
-        name=data.name,
+        name=data.name,  
         email=data.email,
         password=hash_password(data.password),
         role="admin"
     )
-
+    
     db.add(new_admin)
     db.commit()
     db.refresh(new_admin)
