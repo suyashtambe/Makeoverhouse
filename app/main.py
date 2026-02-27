@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from app.database import Base, engine
-from app.routers import admin_module, admin_module_item, admin_apartment, admin_auth, public
-from app.models import user, apartment, module, module_item
-
+from app.routers import admin_module, admin_module_item, admin_apartment, admin_auth, public, admin_design_image
+from app.models import user, apartment, module, module_item, design_image
 
 
 
 app = FastAPI()
 app.include_router(admin_apartment.router)
+app.include_router(admin_design_image.router)
 app.include_router(admin_auth.router)
 app.include_router(admin_module.router)
 app.include_router(admin_module_item.router)

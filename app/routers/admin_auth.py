@@ -9,14 +9,14 @@ from app.core.dependencies import get_current_admin
 router = APIRouter(prefix="/api/admin", tags=["Admin Auth"])
 
 @router.get("/me")
-def get_admin_profile(current_admin = Depends(get_current_admin)):
+def get_admin_profile(current_admin = Depends(get_current_admin)): 
     return {
         "id": current_admin.id,
         "email": current_admin.email,
         "role": current_admin.role
     }
  
-@router.post("/register")
+@router.post("/register") 
 def register_admin(data: AdminRegister, db: Session = Depends(get_db)):
     existing = db.query(User).filter(User.email == data.email).first()
     if existing:

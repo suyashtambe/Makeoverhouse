@@ -4,8 +4,11 @@ from app.database import get_db
 from app.models.apartment import ApartmentType
 from app.models.module import RoomModule
 from app.models.module_item import ModuleItem
+from app.models.design_image import DesignImage
 
 router = APIRouter(prefix="/api", tags=["Public APIs"])
+
+
 
 @router.get("/apartments")
 def get_apartments(db: Session = Depends(get_db)):
@@ -30,5 +33,20 @@ def get_designs(
         ModuleItem.module_id == module_id,
         ModuleItem.is_active == True
     ).all()
+    
+    
+@router.get("/designs/{module_item_id}")
+def get_design_with_images(module_item_id: int, db: Session = Depends(get_db)):
+    design = db.query(ModuleItem).filter(
+        ModuleItem.id == module_item_id,
+        ModuleItem.is_active == True
+    ).first()
 
+    images = db.query(DesignImage).filter(
+        DesignImage.module_item_id == module_item_id
+    ).all()
 
+    return {
+        "design": design,
+        "images": images
+    }
