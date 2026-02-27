@@ -32,3 +32,15 @@ def get_current_admin(
         raise HTTPException(status_code=401, detail="User not found")
 
     return user
+
+def get_current_user(
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+    db: Session = Depends(get_db)
+):
+    token = credentials.credentials
+
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    email = payload.get("sub")
+
+    user = db.query(User).filter(User.email == email).first()
+    return user

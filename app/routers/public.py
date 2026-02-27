@@ -1,10 +1,12 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from app.core.dependencies import get_current_user
 from app.database import get_db
 from app.models.apartment import ApartmentType
 from app.models.module import RoomModule
 from app.models.module_item import ModuleItem
 from app.models.design_image import DesignImage
+
 
 router = APIRouter(prefix="/api", tags=["Public APIs"])
 
@@ -50,3 +52,4 @@ def get_design_with_images(module_item_id: int, db: Session = Depends(get_db)):
         "design": design,
         "images": images
     }
+    
