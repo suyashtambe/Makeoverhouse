@@ -25,3 +25,12 @@ class ModuleItemResponse(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class ModuleItemCreate(BaseModel):
+    title: str
+    description: Optional[str] = None
+    price: Optional[int] = None
+    style: Optional[str] = None
+    apartment_id: int
+    module_id: int

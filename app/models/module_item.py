@@ -9,6 +9,7 @@ class ModuleItem(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
     description = Column(String, nullable=True)
+    style = Column(String, nullable=True)
     price = Column(Integer, nullable=True)
 
     apartment_id = Column(Integer, ForeignKey("apartment_types.id"))

@@ -1,1 +1,200 @@
-> Add Design Images & Gallery
+>>get inspired module
+
+
+🏠 1️⃣ Core Public Website Modules
+✅ Home Page
+
+1.Hero Section
+
+2.Get Inspired (hover)
+
+3.Get Personalized (hover)
+
+4.Featured Sections
+
+5.Footer
+
+6.Header (Normal & Personalized)
+
+🎨 2️⃣ Get Inspired Module
+
+From files:
+Get Inspired (With Advance Filter)
+
+This module includes:
+
+Sub-features:
+
+Advanced Filter
+
+Style filter
+
+Room filter
+
+Possibly price/category filter
+
+Grid listing of inspirations
+
+Design detail view
+
+🧠 3️⃣ Get Personalized Module
+
+From files:
+
+Select type of apartment
+
+Enter building name
+
+Selection visible via left panel numbers
+
+Sub-modules:
+
+Apartment Type Selection:
+
+1 BHK
+
+2 BHK
+
+3 BHK
+
+4 BHK
+
+(Possibly more)
+
+Step-by-step questionnaire
+
+Progress tracker
+
+Personalized recommendation result
+
+🛋 4️⃣ Room Modules 
+
+Based on your earlier mention + design flow:
+
+Room Categories:
+
+Dining Area
+
+Living Area
+
+Bedroom
+
+Kitchen (likely)
+
+Bathroom (likely)
+
+Balcony (possible)
+
+Kids Room (possible)
+
+Study Room (possible)
+
+These are dynamic modules created by admin.
+
+🛒 5️⃣ Product Page Module
+
+From:
+Product Page.pdf
+
+Includes:
+
+Product details
+
+Image gallery
+
+Description
+
+Possibly add to moodboard
+
+❤️ 6️⃣ Account / Moodboard Module
+
+From:
+Accoun Moodboard
+
+Includes:
+
+Saved designs
+
+Saved products
+
+Collection management
+
+ℹ️ 7️⃣ Static Content Modules (CMS)
+
+From files:
+
+FAQ
+
+About Us
+
+Passion
+
+Terms & Conditions (likely)
+
+Privacy Policy (likely)
+
+These are admin-managed CMS pages.
+
+🏢 8️⃣ Apartment Type Module
+
+Explicitly shown:
+
+1 BHK
+
+2 BHK
+
+3 BHK
+
+4 BHK
+
+Dynamic and managed by admin.
+
+🧩 Final Complete Backend Module List
+
+Here is your full backend module breakdown:
+
+🔐 Authentication Module
+
+Admin login
+
+User login
+
+Register
+
+👨‍💼 Admin Panel Modules
+
+Manage Apartment Types
+
+Manage Room Modules
+
+Manage Module Items (designs/products inside modules)
+
+Manage CMS Pages
+
+Manage Products
+
+Manage Designs
+
+🏠 Public Modules
+
+Home
+
+Get Inspired
+
+Get Personalized
+
+Products
+
+Moodboard
+
+Profile
+
+FAQ
+
+About
+
+Passion
+
+Terms
+
+Privacy
